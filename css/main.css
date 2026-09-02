@@ -1,0 +1,674 @@
+/* hero section */
+.visual {
+    width: 100%;
+    height: 880px;
+    background: url(../img/visual.jpg) no-repeat 0 0/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.visual .text-area {
+    color: #fff;
+    text-align: center;
+}
+.visual .text-area .caption {
+    font-size: var(--font-body-ex);
+}
+.visual .text-area .desc {
+    font: var(--font-heading2);
+}
+.visual .text-area h2 {
+    font: var(--font-display1);
+    margin-top: 20px;
+    margin-bottom: 44px;
+    position: relative;
+}
+.visual .text-area h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 50%;
+    transform: translate(-50%);
+}
+.visual .btn-goto a {
+    background-color: var(--color-gray900);
+}
+.visual .btn-goto a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-gray900);
+}
+.visual .indicator {
+    width: 100%;
+    position: absolute;
+    bottom: 4rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+.visual .indicator span {
+    display: block;
+    width: 4rem;
+    height: 0.4rem;
+    background-color: var(--color-gray300);
+    cursor: pointer;
+}
+.visual .indicator span.on {
+    background-color: var(--color-primary);
+}
+.visual .btn-area button.btn-prev {
+    left: 3.2rem;
+}
+.visual .btn-area button.btn-next {
+    right: 3.2rem;
+}
+
+/* 각 섹션의 공통 */
+.btn-area button {
+    width: 5.6rem;
+    height: 5.6rem;
+    background-color: var(--color-primary);
+    border-radius: 1.2rem;
+    text-align: center;
+    font-size: var(--font-body-large);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.btn-area .btn-prev {
+    left: 0;
+}
+.btn-area .btn-next {
+    right: 0;
+}
+.btn-goto {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+}
+.btn-goto a {
+    padding: 12px 19px 12px 24px;
+    background-color: var(--color-gray150);
+    border-radius: 1.2rem;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.btn-goto span {
+    font-size: var(--font-body-large);
+    font-weight: 600;
+}
+
+section {
+    padding: 12rem 0 16rem;
+    width: 100%;
+    overflow: hidden;
+}
+section h2 {
+    text-align: center;
+    font: var(--font-heading1);
+    margin-bottom: 8rem;
+}
+
+/* section2 활동 */
+.activity {text-align: center;}
+.activity .list-area {
+    position: relative;
+}
+.activity .list-area button.btn-prev {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+.activity .list-area button.btn-next {
+    right: 0;
+    transform: translate(50%, -50%);
+}
+.activity .list-wrap {
+    display: flex;
+    gap: 20px;
+}
+.activity .list-wrap .list {
+    width: 413px;
+    height: 420px;
+    flex-shrink: 0; /* 아이템 줄어듦 속성 */
+    text-align: center;
+    color: var(--color-gray100);
+    border-radius: 3.6rem;
+    transition: 0.1s;
+}
+.activity .list-wrap .list a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.activity .list-wrap .list h3 {
+    font: var(--font-heading2);
+}
+.activity .list-wrap .list p {
+    font-size: var(--font-body-large);
+    display: none;
+    transition: 0.1;
+}
+.activity .list-wrap .list p:before {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: var(--color-primary);
+    display: block;
+    margin: 20px auto;
+}
+
+/* list 마우스 호버 */
+.activity .list-wrap .list:hover p {
+    display: block;    
+}
+.activity .list-wrap .list:hover {
+    border: 10px solid var(--color-primary);
+}
+.activity .btn-goto a:hover {
+    background-color: var(--color-gray300);
+    border-color: var(--color-gray800);
+}
+
+/* 배경 이미지 */
+.activity .list-wrap .list:nth-child(1) {
+    background: url(../img/acts01.jpg);
+}
+.activity .list-wrap .list:nth-child(2) {
+    background: url(../img/acts02.jpg);
+}
+.activity .list-wrap .list:nth-child(3) {
+    background: url(../img/acts03.jpg);
+}
+.activity .list-wrap .list:nth-child(4) {
+    background: url(../img/acts04.jpg);
+}
+.activity .list-wrap .list:nth-child(5) {
+    background: url(../img/acts05.jpg);
+}
+.activity .list-wrap .list:nth-child(6) {
+    background: url(../img/acts06.jpg);
+}
+/* #배경 이미지 */
+
+
+
+/* section3 */
+.involve {
+    background-color: var(--color-gray100);
+}
+.involve .tab-btn {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 4.4rem;
+}
+.involve .tab-btn li {
+    color: var(--color-gray600);
+    font-size: var(--font-body-large);
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+}
+.involve .tab-btn li.on {
+    color: var(--color-gray900);
+}
+.involve .tab-btn li.on::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-primary-dark);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.involve .tab-con {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+.involve .tab-con .content .img-area {
+    border-radius: 2.4rem;
+    overflow: hidden;
+}
+.involve .tab-con .content h3 {
+    margin: 2.4rem 0 1.2rem 0;
+    font-size: var(--font-body-large);
+    font-weight: 600;
+}
+.involve .tab-con .content .desc {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.involve .tab-con .content .desc span:nth-child(1) {
+    background-color: var(--color-gray300);
+    padding: 0.4rem 1.2rem;
+    border-radius: 0.8rem;
+    font-weight: 600;
+}
+.involve .tab-con .content .desc span:nth-child(2) {
+    color: var(--color-gray600);
+}
+.involve .con-wrap {
+    position: relative;
+}
+.involve button.btn-prev {
+    left: 0;
+    transform: translate(-50%, -50%);
+    margin-top: -80px;
+}
+.involve button.btn-next {
+    right: 0;
+    transform: translate(50%, -50%);
+    margin-top: -80px;
+}
+.involve .btn-goto a {
+    border: 1px solid var(--color-gray500);
+    background-color: transparent; /* 투명하게 처리 */
+}
+.involve .btn-goto a:hover {
+    background-color: #fff;
+    border-color: var(--color-gray800);
+}
+.involve .scroll-bar {
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-gray300);
+    margin-top: 6rem;
+}
+.involve .scroll-bar span {
+    display: block;
+    width: 128px;
+    height: 100%;
+    background-color: var(--color-primary-dark);
+}
+
+/* section4 */
+.donate {
+    background: url(../img/bg-donate.jpg) no-repeat 0 0/cover;
+    color: var(--color-gray100);
+    padding: 12rem 0;
+    text-align: center;
+}
+.donate h2 {
+    font: var(--font-display2);
+    margin-bottom: 5.6rem;
+}
+.donate .sele,
+.donate .txt-result {
+    font: var(--font-heading2);
+}
+.donate select {
+    font: var(--font-heading2);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    backdrop-filter: blur(4rem); /* 배경에만 필터 적용 */
+    padding: 1.2rem 1.5rem;
+    color: var(--color-gray500);
+    border-radius: 1.2rem;
+}
+.donate .sele {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.4rem;
+}
+.donate .txt-result span {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4rem);
+    padding: 0.8rem 2.4rem;
+    border-radius: 1.2rem;
+}
+.donate .btn-wrap {
+    margin-top: 6rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+.donate .btn-wrap a {
+    display: block;
+    padding: 1.2rem 2.4rem;
+    background-color: var(--color-gray100);
+    color: var(--color-gray900);
+    font-size: var(--font-body-large);
+    font-weight: 600;
+    border-radius: 1.2rem;
+}
+.donate .btn-wrap a:first-child {
+    background-color: var(--color-primary);
+}
+.donate .btn-wrap a:first-child:hover {
+    background-color: var(--color-primary-dark);
+}
+.donate .btn-wrap a:last-child:hover {
+    background-color: var(--color-gray300);
+}
+
+/* section5 */
+.intro {
+    background: black url(../img/bg-intro.jpg) no-repeat 0 100%;
+    color: var(--color-gray100);
+    position: relative;
+}
+/* 그라데이션 효과 넣기 */
+.intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(1, 1, 2, 1) 70%,rgba(1, 1, 2, 0.4) 100%);
+}
+.intro .container {
+    display: flex;
+    gap: 13rem;
+}
+.intro h2 {
+    text-align: left;
+    margin-bottom: 4rem;
+}
+.intro .tit-area p {
+    font-size: var(--font-body-medium);
+    margin-bottom: 3rem;
+}
+.intro .tit-area {
+    width: calc(50% - 13rem);
+    position: relative;
+}
+.intro .tit-area .btn-wrap {
+    margin-top: 6rem;
+    display: flex;
+    gap: 2rem;
+}
+.intro .tit-area .btn-wrap a {
+    padding: 1.2rem 2.4rem;
+    background-color: var(--color-gray800);
+    border-radius: 1.2rem;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    transition: 0.2s;
+}
+.intro .tit-area .btn-wrap a:hover {
+    color: var(--color-gray900);
+    background-color: #fff;
+}
+.intro .tit-area .btn-wrap span {
+    font-size: var(--font-body-large);
+    font-weight: 600;
+}
+.intro .feature {
+    width: 50%;
+}
+.intro .feature .fea-item {
+    background-color: rgba(112, 112, 122, 0.1);
+    background-repeat: no-repeat;
+    background-position: right 40px bottom 30px;
+    backdrop-filter: blur(3rem);
+    padding: 6rem;
+    border-radius: 3.2rem;
+    margin-bottom: 4rem;
+    height: 43rem;
+}
+.intro .feature .fea-item:nth-child(1) {
+    background-image: url(../img/icon1.png);
+}
+.intro .feature .fea-item:nth-child(2) {
+    background-image: url(../img/icon2.png);
+}
+.intro .feature .fea-item:nth-child(3) {
+    background-image: url(../img/icon3.png);
+}
+.intro .feature .fea-item:last-child {
+    margin-bottom: 0;
+}
+.intro .feature .fea-item h3 {
+    color: var(--color-primary);
+    font-size: var(--font-body-large);
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.intro .feature .fea-item p {
+    font-size: var(--font-body-ex);
+    font-weight: 600;    
+}
+.intro .feature .fea-item p strong {
+    font: var(--font-display1);
+}
+/* section6 */
+.links .link-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.links .link-wrap .link-item {
+    width: 25%;
+}
+.links .link-wrap .link-item a {
+    background-color: var(--color-gray200);
+    background-repeat: no-repeat;
+    background-position: right top 10px;
+    padding: 2rem 2rem 2rem 4rem;
+    border-radius: 2.4rem;
+    height: 30.4rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    transition: transform 0.2s;
+}
+.links .link-wrap .link-item:nth-child(1) a {
+    background-image: url(../img/qicon1.png);
+}
+.links .link-wrap .link-item:nth-child(2) a {
+    background-image: url(../img/qicon2.png);
+}
+.links .link-wrap .link-item:nth-child(3) a {
+    background-image: url(../img/qicon3.png);
+}
+.links .link-wrap .link-item:nth-child(4) a {
+    background-image: url(../img/qicon4.png);
+}
+.links .link-wrap .link-item a span {
+    font-size: var(--font-body-ex);
+    font-weight: 600;
+}
+.links .link-wrap .link-item a .icon-box {
+    width: 5.6rem;
+    height: 5.6rem;
+    background-color: var(--color-gray100);
+    border-radius: 1.2rem;
+    text-align: center;
+    line-height: 5.6rem;
+    font-size: var(--font-body-large);
+    color: var(--color-gray600);
+    transition: 0.2s;
+}
+/* 각 퀵메뉴 호버 */
+.links .link-wrap .link-item a:hover {
+    transform: translateY(-5%);
+    background-color: #fff;
+    border: 1px solid var(--color-gray300);
+}
+.links .link-wrap .link-item a:hover .icon-box {
+    background-color: var(--color-primary);
+    color: var(--color-gray900);
+}
+/* section7 */
+.board .tab-btn {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+.board .tab-btn li {
+    font-size: var(--font-body-large);
+    font-weight: 600;
+    color: var(--color-gray600);
+    cursor: pointer;
+    position: relative;
+}
+.board .tab-btn li.on {
+    color: var(--color-gray900);
+}
+.board .tab-btn li.on::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-primary-dark);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.board .board-item a {
+    width: 100%;
+    padding: 2rem;
+    border: 1px solid var(--color-gray300);
+    border-radius: 1.6rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.board .board-item a .tag {
+    width: 8rem;
+    background-color: var(--color-primary);
+    border-radius: 0.8rem;
+    text-align: center;
+    line-height: 4rem;
+    flex-shrink: 0; /*flexbox의 부모공간이 부족할 때, 자식요소를 얼마나 줄일것인가를 지정하는 속성*/
+}
+.board .board-item a .title {
+    font-size: var(--font-body-large);
+    font-weight: 600;
+    flex-grow: 1; /*flexbox의 item적용, 부모요소의 남은 공간을 자식요소들이 얼마나 나누어 가질지를 지정하는 속성*/
+    white-space: nowrap; /*글자 한 줄 배치*/
+    overflow: hidden; /*넘피는 텍스트 잘라서 안보이게*/
+    text-overflow: ellipsis; /*...표시*/
+    transition: 0.5s;
+}
+.board .board-item a .date {
+    font-size: var(--font-body-medium);
+    color: var(--color-gray600);
+    flex-shrink: 0;
+}
+.board .board-item a .btn {
+    width: 14rem;
+    height: 5.6rem;
+    background-color: var(--color-gray150);
+    border-radius: 1.2rem;
+    text-align: center;
+    line-height: 5.6rem;
+    font-size: var(--font-body-large);
+    font-weight: 600;
+    flex-shrink: 0;
+}
+/* 각 목록의 호버 */
+.board .board-item a:hover {
+    border-color: var(--color-gray900);
+}
+.board .board-item a .title span {
+    position: relative;
+}
+.board .board-item a .title span::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 10px;
+    background-color: var(--color-primary);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s;
+}
+.board .board-item a:hover .title span::after {
+    width: 100%;
+}
+/* section8 */
+.subscribe {
+    background-color: var(--color-gray900);
+    color: var(--color-gray100);
+    padding: 8rem 0;
+}
+.subscribe .container {
+    display: flex;
+}
+.subscribe .container .text-area,
+.subscribe .container .formbox {
+    width: 50%;
+}
+.subscribe h2 {
+    text-align: left;
+    font: var(--font-heading2);
+    margin-bottom: 2rem;
+}
+.subscribe p {
+    font-size: var(--font-body-large);
+}
+.subscribe .formbox .row {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 1.6rem;
+    justify-content: space-between;
+}
+.subscribe .formbox .row > label {
+    width: 6rem;
+    text-align: right;
+    font-size: var(--font-body-large);
+    font-weight: 600;
+}
+.subscribe .formbox .row input#user-name,
+.subscribe .formbox .row input#user-email {
+    width: 52rem;
+    height: 5rem;
+    background-color: transparent;
+    border: 1px solid var(--color-gray100);
+    border-radius: 1.2rem;
+    color: var(--color-gray100);
+    font-size: var(--font-body-medium);
+    padding: 0 2rem;
+    flex-grow: 1;
+}
+.subscribe .formbox .row .agree {
+    padding-left: 10rem;
+    display: flex;
+    gap: 1rem;
+}
+.subscribe .formbox .row .agree input {
+    width: 2rem;
+    height: 2rem;
+    appearance: none; /*체크박스의 기본모양 제거*/
+    background-color: transparent;
+    border: 1px solid var(--color-gray100);
+    border-radius: 0.4rem;
+    cursor: pointer;
+    /*accent-color: var(--color-primary);*/
+}
+.subscribe .formbox .row .agree input:checked {
+    background: var(--color-primary) url(../img/Vector\ 1.png) no-repeat center center;
+    border-color: var(--color-primary) ;
+}
+.subscribe .formbox .row .agree label {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+}
+.subscribe .formbox button {
+    padding: 1.2rem 2.4rem;
+    background-color: var(--color-primary);
+    color: var(--color-gray900);
+    font-size: var(--font-body-large);
+    font-weight: 600;
+    border-radius: 1.2rem;
+}
