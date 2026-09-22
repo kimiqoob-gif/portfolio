@@ -13,20 +13,16 @@ a {
     color: inherit;
 }
 img {
-    vertical-align: top;
     max-width: 100%;
+    vertical-align: top;
 }
 button {
     all: unset;
     cursor: pointer;
 }
-
-html {
-    font-size: 62.5%; /* 16px 기준 62.5% = 10px */
-}
 body {
     font-size: 1.6rem;
-    font-family: 'Pretendard', sans-serif;
+    font-family: 'pretendard', sans-serif;
     line-height: 1.6;
     color: var(--color-gray900);
 }

@@ -1,34 +1,24 @@
 :root {
-    --color-primary: #ffff00;
-    --color-primary-dark: #ffe600;
+    --canvas-width: 1920px;
+    --canvas-height: 850px;
+    --color-yellow: #ffff00;
     --color-gray900: #010102;
-    --color-gray800: #2b2b2d;
-    --color-gray700: #4a4a4c;
-    --color-gray600: #818183;
+    --color-gray700: #4a4740;
     --color-gray500: #ababad;
-    --color-gray400: #d7d7d9;
     --color-gray300: #ebebee;
     --color-gray200: #f1f1f4;
-    --color-gray150: #f6f6f9;
     --color-gray100: #fafafc;
 }
 
 :root {
-    /*
-    html요소의 폰트사이즈 설정 62.5% (10px)
-    축약형> font: style weight size/line-height family;
-    */
-    --font-display1: 700 6.4rem/1.2 'Pretendard', sans-serif;
-    --font-display2: 600 5.2rem/1.2 'Pretendard', sans-serif;
-    --font-heading1: 600 4rem/1.4 'Pretendard', sans-serif;
-    --font-heading2: 600 3.2rem/1.4 'Pretendard', sans-serif;
-    --font-heading3: 600 2.4rem/1.4 'Pretendard', sans-serif;
-    /* 폰트사이즈 */
-    --font-body-normal: 1.6rem;
-    --font-body-small: 1.4rem;
-    --font-body-medium: 1.8rem;
-    --font-body-large: 2rem;
-    --font-body-ex: 2.4rem;
-
+    --font-display1: 600 6rem/1.2 'Pretendard', sans-serif; /*96*/
+    --font-display2: 400 4rem/1.2 'Pretendard', sans-serif; /*64*/
+    --font-heading1: 600 3.2rem/1.4 'Pretendard', sans-serif; /*52*/
+    --font-heading2: 600 2.5rem/1.4 'Pretendard', sans-serif; /*40*/
     
+    --font-body-normal: 1rem/1.4 'Pretendard', sans-serif; /*16*/
+    --font-body-small: 0.8rem/1.4 'Pretendard', sans-serif; /*14*/
+    --font-body-medium: 1.5rem/1.4 'Pretendard', sans-serif; /*24*/
+    --font-body-large: 1.62rem/1.4 'Pretendard', sans-serif; /*26*/
+    --font-body-ex: 2rem/1.4 'Pretendard', sans-serif; /*32*/
 }
