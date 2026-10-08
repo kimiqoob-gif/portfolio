@@ -124,6 +124,46 @@
         </footer>
     </main>
 
+    <!-- 모달팝업 -->
+    <div class="modal-wrap">
+        <div class="modal-con">
+            <img src="./img/Detailed Page1.jpg" alt="">
+             <button type="button" class="btn-close-window"></button>
+        </div>
+    </div>
+
+    <script src="./js/jquery-3.7.1.min.js" alt=""></script>
+    <script>
+        $(function(){
+            // 모달팝업 오픈
+            $('.project-card.project-card--featured').click(function(e){
+                e.preventDefault();
+                // 모달팝업 보이기
+                $('.modal-wrap').fadeIn(200);
+
+                // 클릭 이미지 경로 가져오기
+                let details = $(this).find('a').attr('href');
+                // 모달 이미지 변경
+                $('.modal-con img').attr({'src': details});
+            });
+
+            // 모달팝업 닫기
+            $('.btn-close-window').click(function(e){
+            $('.modal-wrap').fadeOut(200);s
+            });
+            // 모달 바깥 영역 클릭하면 닫기
+            $('.modal-wrap').click(function(){
+                if ('.btn-close-window') {
+                    $('.modal-wrap').fadeOut(200);
+                }
+            });
+
+        //////////////////////////// 
+        });
+    </script>
+
+    <!-- //모달팝업 -->
+
     <script> /*네비게이션 스크롤시 */
         const hero = document.querySelector(".portfolio-hero");
         const header = document.querySelector(".site-header");
