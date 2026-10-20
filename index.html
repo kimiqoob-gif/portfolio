@@ -122,6 +122,14 @@
                     </div>
                     <h3>Detail Page Design</h3>
                 </article>
+                <article class="project-card project-card--featured">
+                    <div class="project-image">
+                        <a href="./img/Detailed Page6.jpg">
+                            <img src="./img/mockup6.png" alt="목업 상세페이지">
+                        </a>
+                    </div>
+                    <h3>SNS Banner Design</h3>
+                </article>
             </div>
         </section>
 
@@ -160,28 +168,46 @@
     <script>
         $(function(){
             // 모달팝업 오픈
-            $('.project-card.project-card--featured').click(function(e){
+           $(function () {
+            const $modal = $('.modal-wrap');
+            const $modalContent = $('.modal-con');
+            const $modalImage = $('.modal-con img');
+
+            // 프로젝트 클릭 시 모달 열기
+            $('.project-card.project-card--featured').on('click', function (e) {
                 e.preventDefault();
-                // 모달팝업 보이기
-                $('.modal-wrap').fadeIn(200);
+                const details = $(this).find('a').attr('href');
 
-                // 클릭 이미지 경로 가져오기
-                let details = $(this).find('a').attr('href');
-                // 모달 이미지 변경
-                $('.modal-con img').attr({'src': details});
+                // 이미지 변경
+                $modalImage.attr('src', details);
+
+                // 모달과 내부 콘텐츠의 스크롤 초기화
+                $modal.scrollTop(0);
+                $modalContent.scrollTop(0);
+
+                // 종료 후에도 최상단 유지
+                $modal.stop(true, true).fadeIn(200, function () {
+                    this.scrollTop = 0;
+                    $modalContent.scrollTop(0);
+                });
             });
 
-            // 모달팝업 닫기
-            $('.btn-close-window').click(function(e){
-            $('.modal-wrap').fadeOut(200);s
+            // 닫기 버튼 클릭
+            $('.btn-close-window').on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                $modal.stop(true, true).fadeOut(200);
             });
-            // 모달 바깥 영역 클릭하면 닫기
-            $('.modal-wrap').click(function(){
-                if ('.btn-close-window') {
-                    $('.modal-wrap').fadeOut(200);
+
+            // 모달 바깥 영역 클릭 시 닫기
+            $modal.on('click', function (e) {
+                if (e.target === this) {
+                    $modal.stop(true, true).fadeOut(200);
                 }
             });
 
+            });
         //////////////////////////// 
         });
     </script>
